@@ -13,18 +13,21 @@ html{
   font-family: 'Inter', sans-serif;
 }
 
+
+
   body{
     margin: 0;
     padding: 0;
     background-color: var(--off-white);
     height: 100vh;
+    overflow-x: hidden;
   }
 
   h1{
     margin: 0;
     color: var(--off-white);
     text-align: center;
-    font-size: 48px;
+    font-size: 68px;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: 800;
@@ -49,18 +52,21 @@ html{
   }
 
   .background-container{
+    /*
     background-image: url('../images/background3.avif');
     background-size: cover;
     background-position:  bottom;
     background-repeat: no-repeat;
+    */
+    background-color: black;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .title{
     text-align: center;
+    z-index: 2;
   }
 
   .navbar {
