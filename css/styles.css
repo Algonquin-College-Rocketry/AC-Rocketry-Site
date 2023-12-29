@@ -133,7 +133,7 @@ html{
   }
   
   .team-content img {
-    height: 800px;
+    height: 400px;
     width: auto;
     margin-right: 100px;
   }
@@ -155,7 +155,7 @@ html{
   }
 
   .competition-info img {
-    width: 800px;
+    width: 400px;
     height: auto;
     margin-top: 20px;
     margin-left: 100px;
