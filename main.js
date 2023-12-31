@@ -10,12 +10,13 @@ const createScene = () => {
   WIDTH = window.innerWidth;
   DIVIDEAMOUNT = 1.5;
   scene = new THREE.Scene();
+  //const axisHelper = new THREE.AxesHelper(50);
   canvas = document.querySelector('#rocket-view-container');
   aspectRatio = WIDTH / (HEIGHT/DIVIDEAMOUNT);
   fieldOfView = 60;
   nearPlane = 1;
   farPlane = 10000;
-  
+  //scene.add(axisHelper)
   // Defining the camera
   camera = new THREE.PerspectiveCamera(
     fieldOfView,
@@ -36,9 +37,15 @@ const createScene = () => {
   loader.load( "models/rocket.glb",
     (gltf) => {
       rocket = gltf.scene;
-      rocket.position.x = -85;
-      rocket.position.y = -15;
-      rocket.position.z = 50;
+      rocket.position.x = 0;
+      rocket.position.y = 55;
+      rocket.position.z = -290;
+  
+      rocket.rotation.y = 55;
+      rocket.rotation.z = -1.58;
+      //rocket.position.x = -85;
+      //rocket.position.y = -15;
+      //rocket.position.z = 50;
       scene.add(rocket);
     }
   );
@@ -61,11 +68,20 @@ const handleWindowResize = () => {
  // HEIGHT = document.getElementById('rocket-view-container').clientHeight
   //WIDTH = document.getElementById('rocket-view-container').clientWidth
   
+ 
   HEIGHT = window.innerHeight;
   WIDTH = window.innerWidth;
 
+  console.log(HEIGHT)
+  console.log(WIDTH)
+
+  if (WIDTH > 401 && WIDTH < 960) {
+    console.log("tablet mode")
+  }
+
+  rocket.updateMatrix()
+  
   renderer.setSize(WIDTH, (HEIGHT/DIVIDEAMOUNT));
-  console.log()
   camera.aspect = WIDTH / (HEIGHT/DIVIDEAMOUNT);
   camera.updateProjectionMatrix();
 };
@@ -91,8 +107,10 @@ const loop = () => {
   renderer.render(scene, camera);
   const delta = targetRocketPosition * Math.sin(Math.PI * 2 * t);
   if (rocket) {
-    //rocket.rotation.y += 0.1;
-    rocket.rotation.x += 0.007;
+    rocket.rotation.y += 0.007;
+
+    //rocket.rotation.x += 0.007;
+
     //rocket.rotation.z += 0.1;
     //rocket.position.y = delta;
   }
