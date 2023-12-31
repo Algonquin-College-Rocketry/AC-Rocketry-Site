@@ -22,6 +22,7 @@
 
 <body>
   <div class="page">
+    <div class="filter"></div>
     <nav class="navbar">
       <ul class="nav-links">
         <li class="nav-item"><a class="nav-link" aria-current="page" href="./index.html">Home</a></li>
@@ -37,30 +38,47 @@
         <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
       </div>
     </nav>
-  </div>
 
-  <div class="rocket-launch-container">
-    <div class="filter"></div>
-    <div id="background-container">
-      <canvas id="rocket-view-container"></canvas>
-      <script type="module" src="./main.js"></script>
+    <div class="section rocket-launch-container">
+      <div id="background-container">
+        <canvas id="rocket-view-container"></canvas>
+        <script type="module" src="./main.js"></script>
+      </div>
+      <div class="main-title">
+        <h1>ALGONQUIN COLLEGE</h1>
+        <h1>ROCKETRY</h1>
+        <h2>Precise Engineering. Blazing Speed</h2>
+      </div>
     </div>
-    <div class="main-title">
-      <h1>Algonquin College</h1>
-      <h1>Rocketry</h1>
-      <h2>Precise Engineering. Blazing Speed</h2>
-    </div>
-  </div>
 
-  <svg>
-    <filter id='noiseFilter'>
-      <feTurbulence 
-        type='fractalNoise' 
-        baseFrequency='0.6' 
-        stitchTiles='stitch'
-      />
-    </filter>
-  </svg>
+    <div class="section about-us-container">
+      <div class="about-us-content-wrapper">
+        <div class="about-us-picture"></div>
+        <div class="about-us-content">
+          <h3>About the Team</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor et praesentium porro officia sed deleniti
+            dicta ipsa commodi quas explicabo perspiciatis excepturi, minus eveniet accusamus culpa possimus
+            exercitationem qui ad itaque pariatur, at consectetur. Vel, est magnam! Voluptates molestiae ipsum nobis,
+            hic
+            ad cupiditate quam, officiis adipisci reiciendis provident itaque. Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Distinctio sit, ullam quidem quaerat doloribus dolore in nulla qui eaque optio nemo
+            debitis
+            totam exercitationem nostrum.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae illo quas nostrum eius ipsa sunt quia
+            provident quos iste dolor! Suscipit adipisci porro quod doloremque ipsum asperiores aut quidem fugiat, eum
+            beatae minima, nisi blanditiis praesentium quibusdam, vero odit illo. Alias quae odit repellat quas vel unde
+            hic necessitatibus nostrum.</p>
+        </div>
+      </div>
+    </div>
+
+    <svg>
+      <filter id="noiseFilter">
+        <feTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch' />
+      </filter>
+    </svg>
+
+  </div>
 
 </body>
 

@@ -58,9 +58,14 @@ const createScene = () => {
 
 // Handles what happens when the window resizes
 const handleWindowResize = () => {
+ // HEIGHT = document.getElementById('rocket-view-container').clientHeight
+  //WIDTH = document.getElementById('rocket-view-container').clientWidth
+  
   HEIGHT = window.innerHeight;
   WIDTH = window.innerWidth;
+
   renderer.setSize(WIDTH, (HEIGHT/DIVIDEAMOUNT));
+  console.log()
   camera.aspect = WIDTH / (HEIGHT/DIVIDEAMOUNT);
   camera.updateProjectionMatrix();
 };
