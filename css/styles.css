@@ -7,174 +7,102 @@
   --dark-grey: #c1c1c1;
 }
 
-html{
+html {
   padding: 0;
   margin: 0;
   font-family: 'Inter', sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color:rgb(0, 0, 0);
+  overflow-x: hidden;
+}
 
+.page{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 
-  body{
-    margin: 0;
-    padding: 0;
-    background-color: var(--off-white);
-    height: 100vh;
-    overflow-x: hidden;
-  }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-algonquin-green);
+  color: white;
+}
 
-  h1{
-    margin: 0;
-    color: var(--off-white);
-    text-align: center;
-    font-size: 68px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-weight: 800;
-  }
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
 
-  h2{
-    margin: 0;
-    color: var(--dark-grey);
-    text-align: center;
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 400;
-    margin-top: 1em;
+.nav-links li {
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 1em;
+  letter-spacing: 1px;
+  margin-right: 2rem;
+  font-weight: 300;
+}
 
-  }
+.nav-links li a {
+  text-decoration: none;
+  color: var(--light-grey);
+  font-size: 1em;
+}
 
-  h3{
-    font-size: 40px;
-    font-weight: 400;
-    color: var(--algonquin-green);
-  }
+.social-icons {
+  display: flex;
+  margin: 12px 0;
+  list-style: none;
+  padding: 0;
+  padding-right: 1em;
+  display: flex;
+  align-items: center;
+}
 
-  .background-container{
-    /*
-    background-image: url('../images/background3.avif');
-    background-size: cover;
-    background-position:  bottom;
-    background-repeat: no-repeat;
-    */
-    background-color: black;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-  }
+.social-icons a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: var(--light-grey)
+}
 
-  .title{
-    text-align: center;
-    z-index: 2;
-  }
+.social-icons i {
+  font-size: 1.2em;
+  margin: 0 10px;
+}
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--dark-algonquin-green);
-    color: white;
-  }
+.rocket-launch-container{
+  border: 1px solid;
+  background-color: black;
+}
 
-  .nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-  }
+#background-container{
+  border: 1px solid;
+}
 
-  .nav-links li {
-    margin-right: 10px;
-    text-decoration: none;
-    font-size: 1em;
-    letter-spacing: 1px;
-    margin-right: 2rem;
-    font-weight: 300;
-  }
+.main-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height:100%;
+  border: 1px solid;
+}
 
-  .nav-links li a {
-    text-decoration: none;
-    color: var(--light-grey);
-    font-size: 1em;
-  }
+.main-title > h1{
+  margin: 0;
+}
 
-  .social-icons {
-    display: flex;
-    margin: 12px 0;
-    list-style: none;
-    padding: 0;
-    padding-right: 1em;
-    display: flex;
-    align-items: center; 
-  }
-
-  .social-icons a {
-    margin-right: 10px;
-    text-decoration: none;
-    color: var(--light-grey)
-  }
-
-  .social-icons i {
-    font-size: 1.2em;
-    margin: 0 10px;
-  }
-
-  .team-section {
-    padding: 100px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  .team-content {
-    display: flex;
-    align-items: center;
-  }
-  
-  .team-content img {
-    height: 800px;
-    width: auto;
-    margin-right: 100px;
-  }
-  
-  .text-content {
-    width: 600px;
-  }
-
-  .competition-section {
-    background-color: var(--light-algonquin-green);
-    padding: 100px;
-    text-align: left;
-  }
-
-  .competition-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .competition-info img {
-    width: 800px;
-    height: auto;
-    margin-top: 20px;
-    margin-left: 100px;
-  }
-
-  .footer-links {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    margin-top: 2em;
-  }
-
-  .nav-item-footer{
-    padding-bottom: 1.5em;
-  }
-
-  .footer-links a{
-    text-decoration: none;
-    color: var(--light-grey);
-    font-size: 1em;
-  }
-
+.filter {
+  position: absolute;
+  z-index: 2;
+  background: #000;
+  filter: url("#noiseFilter");
+}
