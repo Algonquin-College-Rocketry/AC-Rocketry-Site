@@ -151,6 +151,7 @@ p {
   opacity: 12%;
 }
 
+.launch-info-content-wrapper,
 .about-us-content-wrapper{
   display: flex;
   max-width: 960px;
