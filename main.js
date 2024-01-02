@@ -1,13 +1,14 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-let scene, camera, canvas, fieldOfView, aspectRatio, nearPlane, farPlane, renderer, rocket, HEIGHT, WIDTH, DIVIDEAMOUNT;
+let scene, camera, canvas, fieldOfView, aspectRatio, pixelRatio, nearPlane, farPlane, renderer, rocket, HEIGHT, WIDTH, DIVIDEAMOUNT;
 
 // makes the scene
 const createScene = () => {
 
-  HEIGHT = window.innerHeight;
-  WIDTH = window.innerWidth;
+  pixelRatio = window.devicePixelRatio;
+  HEIGHT = window.innerHeight * pixelRatio | 0;
+  WIDTH = window.innerWidth * pixelRatio | 0;
   DIVIDEAMOUNT = 1.5;
   scene = new THREE.Scene();
   //const axisHelper = new THREE.AxesHelper(50);
@@ -67,10 +68,9 @@ const createScene = () => {
 const handleWindowResize = () => {
  // HEIGHT = document.getElementById('rocket-view-container').clientHeight
   //WIDTH = document.getElementById('rocket-view-container').clientWidth
-  
- 
-  HEIGHT = window.innerHeight;
-  WIDTH = window.innerWidth;
+  pixelRatio = window.devicePixelRatio;
+  HEIGHT = window.innerHeight * pixelRatio | 0;
+  WIDTH = window.innerWidth * pixelRatio | 0;
 
   console.log(HEIGHT)
   console.log(WIDTH)
