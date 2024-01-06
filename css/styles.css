@@ -118,34 +118,29 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding:20px;
 }
 
 .rocket-launch-container {
   /*border: 1px solid;*/
 }
 
-  .team-section {
-    padding: 100px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-  }
+
+.team-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   
-  .team-content {
-    display: flex;
-    align-items: center;
-  }
-  
-  .team-content img {
-    height: 400px;
-    width: auto;
-    margin-right: 100px;
-  }
-  
-  .text-content {
-    width: 600px;
-  }
+}
+
+.team-content img {
+  height: 350px;
+  padding: 50px;
+}
+
+.text-content {
+  width: 600px;
+}
 
 
 .main-title {
@@ -181,28 +176,40 @@ p {
 }
 
 .launch-info-content-wrapper,
-.about-us-content-wrapper{
+.about-us-content-wrapper {
   display: flex;
   max-width: 960px;
 }
 
 /* Mobile Styles */
-@media only screen and (max-width: 400px) {
-
-}
+@media only screen and (max-width: 400px) {}
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
-  .section{
+  /*
+  .main-title{
+    background-color: blue;
+  }
+  */
+  .section {
     margin: 0 auto;
     width: 400px;
+  }
+
+  .team-content{
+    justify-content: center;
+  }
+
+  .team-content img {
+    height: 250px;
   }
 }
 
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
-
-  .main-title{
+  
+  .main-title {
+    /*background-color: red;*/
     padding-top: 45px;
     padding-bottom: 90px;
   }
