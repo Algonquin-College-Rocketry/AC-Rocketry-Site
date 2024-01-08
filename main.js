@@ -39,7 +39,7 @@ const createScene = () => {
     (gltf) => {
       rocket = gltf.scene;
       rocket.position.x = 0;
-      rocket.position.y = 55;
+      rocket.position.y = 75;
       rocket.position.z = -290;
   
       rocket.rotation.y = 55;
