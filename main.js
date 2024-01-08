@@ -6,9 +6,16 @@ let scene, camera, canvas, fieldOfView, aspectRatio, pixelRatio, nearPlane, farP
 // makes the scene
 const createScene = () => {
 
-  pixelRatio = window.devicePixelRatio;
-  HEIGHT = window.innerHeight * pixelRatio | 0;
-  WIDTH = window.innerWidth * pixelRatio | 0;
+  //pixelRatio = window.devicePixelRatio;
+  //HEIGHT = window.innerHeight * pixelRatio | 0;
+  //WIDTH = window.innerWidth * pixelRatio | 0;
+
+  HEIGHT = window.innerHeight
+  WIDTH = window.innerWidth
+  // debug
+  console.log(HEIGHT)
+  console.log(WIDTH)
+
   DIVIDEAMOUNT = 1.5;
   scene = new THREE.Scene();
   //const axisHelper = new THREE.AxesHelper(50);
@@ -66,6 +73,7 @@ const createScene = () => {
 
 // Handles what happens when the window resizes
 const handleWindowResize = () => {
+  console.log('RESIZING')
  // HEIGHT = document.getElementById('rocket-view-container').clientHeight
   //WIDTH = document.getElementById('rocket-view-container').clientWidth
   pixelRatio = window.devicePixelRatio;
