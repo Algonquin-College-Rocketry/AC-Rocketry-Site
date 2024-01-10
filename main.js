@@ -76,9 +76,9 @@ const handleWindowResize = () => {
   console.log('RESIZING')
  // HEIGHT = document.getElementById('rocket-view-container').clientHeight
   //WIDTH = document.getElementById('rocket-view-container').clientWidth
-  pixelRatio = window.devicePixelRatio;
-  HEIGHT = window.innerHeight * pixelRatio | 0;
-  WIDTH = window.innerWidth * pixelRatio | 0;
+  
+  HEIGHT = window.innerHeight;
+  WIDTH = window.innerWidth;
 
   console.log(HEIGHT)
   console.log(WIDTH)

@@ -118,17 +118,13 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding-top: 3em;
 }
-
-
-
 
 .team-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 .team-content img {
@@ -162,6 +158,7 @@ p {
   margin-left: 100px;
 }
 
+/*
 .filter {
   position: fixed;
   padding: 0;
@@ -172,72 +169,12 @@ p {
   filter: url(#noiseFilter);
   opacity: 12%;
 }
-
+*/
 .launch-info-content-wrapper,
 .about-us-content-wrapper {
   display: flex;
   max-width: 960px;
 }
-
-/* Mobile Styles */
-@media only screen and (max-width: 400px) {}
-
-/* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-
-  /*
-  .main-title{
-    background-color: blue;
-  }
-  */
-  .section {
-    margin: 0 auto;
-    width: 400px;
-  }
-
-  .team-content {
-    justify-content: center;
-  }
-
-  .team-content img {
-    height: 250px;
-  }
-}
-
-/* Desktop Styles */
-@media only screen and (min-width: 961px) {
-
-  .main-title {
-    /*background-color: red;*/
-    padding-top: 45px;
-    padding-bottom: 90px;
-  }
-
-  .contact-container {
-    width: min(45em, 100%);
-    margin: 0 auto;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    align-items: center;
-  }
-
-  .contact {
-    background-color: var(--black);
-    display: flex;
-    align-items: center;
-    padding: 3rem 0;
-
-  }
-
-  .contact-title {
-    margin: 0;
-    color: var(--light-algonquin-green);
-    font-size: 60px;
-    font-weight: 400;
-    text-align: center;
-  }
-}
-
 
 .contact-form {
   margin-top: 4rem;
@@ -310,17 +247,6 @@ textarea {
   background-color: var(--dark-algonquin-green);
 }
 
-@media only screen and (min-width: 45em) {
-  .contact-form {
-    grid-column: span 2;
-    --cols: 2;
-  }
-
-  .contact-title {
-    font-size: 3.157rem;
-  }
-}
-
 .contact-subtitle {
   margin: 0;
   margin-top: 4rem;
@@ -347,4 +273,97 @@ textarea {
 
 .sponsor-button:hover {
   background-color: var(--dark-algonquin-green);
+}
+
+@media only screen and (min-width: 45em) {
+  .contact-form {
+    grid-column: span 2;
+    --cols: 2;
+  }
+
+  .contact-title {
+    font-size: 3.157rem;
+  }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+  /*
+  .main-title{
+    background-color: blue;
+  }
+  */
+  .section {
+    margin: 0 auto;
+    width: 400px;
+  }
+
+  .team-content {
+    justify-content: center;
+  }
+
+  .team-content img {
+    height: 250px;
+  }
+
+  .home-title {
+    font-size: 65px;
+  }
+
+  .home-subtitle {}
+
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+
+  .home-title {
+    font-size: clamp(100%, 1rem + 2vw, 47px);
+  }
+
+  .home-subtitle {
+    font-size: clamp(100%, 1rem + 2vw, 18px);
+  }
+
+  .text-content>h3 {
+    font-size: clamp(100%, 1rem + 2vw, 35px);
+  }
+
+  .text-content>p {
+    font-size: clamp(100%, 1rem + 2vw, 15px);
+  }
+
+  .main-title {
+    /*background-color: red;*/
+    padding-top: 45px;
+    padding-bottom: 90px;
+  }
+
+  .contact-container {
+    width: min(45em, 100%);
+    margin: 0 auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    align-items: center;
+  }
+
+  .contact {
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+
+  }
+
+  .contact-title {
+    margin: 0;
+    color: var(--light-algonquin-green);
+    font-size: clamp(100%,1rem + 2vw, 60px);
+    font-weight: 400;
+    text-align: center;
+  }
 }
