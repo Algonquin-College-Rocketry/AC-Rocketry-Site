@@ -118,15 +118,13 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 3em;
 }
 
 .team-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 .team-content img {
@@ -323,23 +321,22 @@ textarea {
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
 
-  
-
   .home-title {
-    font-size: 40px;
+    font-size: clamp(100%, 1rem + 2vw, 47px);
   }
 
   .home-subtitle {
-    font-size: 12px;
+    font-size: clamp(100%, 1rem + 2vw, 18px);
   }
 
-  .text-content > h3 {
-    font-size: 35px;
+  .text-content>h3 {
+    font-size: clamp(100%, 1rem + 2vw, 35px);
   }
-  
-  .text-content > p {
-    font-size: 15px;
+
+  .text-content>p {
+    font-size: clamp(100%, 1rem + 2vw, 15px);
   }
+
   .main-title {
     /*background-color: red;*/
     padding-top: 45px;
@@ -365,7 +362,7 @@ textarea {
   .contact-title {
     margin: 0;
     color: var(--light-algonquin-green);
-    font-size: 60px;
+    font-size: clamp(100%,1rem + 2vw, 60px);
     font-weight: 400;
     text-align: center;
   }
