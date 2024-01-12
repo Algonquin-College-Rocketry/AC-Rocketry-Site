@@ -23,6 +23,31 @@ body {
   overflow-x: hidden;
 }
 
+h3 {
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--algonquin-green);
+}
+
+p {
+  color: var(--off-white);
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3em;
+}
+
 .home-title {
   margin: 0;
   color: var(--off-white);
@@ -43,22 +68,6 @@ body {
   font-weight: 400;
   margin-top: 1em;
 
-}
-
-h3 {
-  font-size: 40px;
-  font-weight: 400;
-  color: var(--algonquin-green);
-}
-
-p {
-  color: var(--off-white);
-}
-
-.page {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
 }
 
 .navbar {
@@ -112,15 +121,6 @@ p {
   margin: 0 10px;
 }
 
-.section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 3em;
-}
-
 .team-content {
   display: flex;
   flex-wrap: wrap;
@@ -150,7 +150,11 @@ p {
   margin: 0;
 }
 
-
+.competition-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .competition-info img {
   width: 400px;
   height: auto;
@@ -287,7 +291,28 @@ textarea {
 }
 
 /* Mobile Styles */
-@media only screen and (max-width: 400px) {}
+@media only screen and (max-width: 400px) {
+  .home-title {
+    font-size: clamp(100%, 1rem + 2vw, 50px);
+  }
+  .home-subtitle {
+    font-size: clamp(80%, 1rem + 1vw, 10px);
+  }
+
+  .comp-image img,
+  .team-content img {
+    height: 280px;
+  }
+
+  .text-content{
+    width: 85%;
+  }
+
+  .text-content > h3 {
+    text-align: center;
+  }
+
+}
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
@@ -362,7 +387,7 @@ textarea {
   .contact-title {
     margin: 0;
     color: var(--light-algonquin-green);
-    font-size: clamp(100%,1rem + 2vw, 60px);
+    font-size: clamp(100%, 1rem + 2vw, 60px);
     font-weight: 400;
     text-align: center;
   }
