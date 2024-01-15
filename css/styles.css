@@ -99,6 +99,15 @@ p {
   text-decoration: none;
   color: var(--light-grey);
   font-size: 1em;
+  transition: transform .3s ease-in-out;
+}
+
+.nav-item {
+  transition: transform .3s ease-in-out;
+}
+
+.nav-item:hover {
+  transform: scale(1.2);
 }
 
 .social-icons {
@@ -122,6 +131,14 @@ p {
   margin: 0 10px;
 }
 
+.home-subtitle,
+.home-title {
+  animation-name: fadeIn;
+  animation-duration: 2.5s;
+  animation-delay: 0s;
+}
+
+
 .team-content {
   display: flex;
   flex-wrap: wrap;
@@ -138,19 +155,16 @@ p {
   width: 600px;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
 
-.main-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  /*border: 1px solid;*/
+  to {
+    opacity: 1;
+  }
 }
 
-.main-title>h1 {
-  margin: 0;
-}
 
 .competition-content {
   display: flex;
@@ -291,7 +305,7 @@ textarea {
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
 
-  .section{
+  .section {
     padding-top: 2rem;
   }
 
