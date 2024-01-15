@@ -131,6 +131,23 @@ p {
   margin: 0 10px;
 }
 
+#sponsors {
+  background-color: #003328;
+}
+
+.grid-item img {
+  height: 50px;
+  text-align: center;
+}
+
+.sponsors-grid {
+  resize: both;
+  display: grid;
+  gap: 4px;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
 .home-subtitle,
 .home-title {
   animation-name: fadeIn;
@@ -145,7 +162,7 @@ p {
   justify-content: center;
 }
 
-.comp-image,
+.comp-image img,
 .team-content img {
   height: 350px;
   padding: 50px;
