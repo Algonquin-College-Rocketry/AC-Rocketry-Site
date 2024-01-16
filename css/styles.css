@@ -29,6 +29,10 @@ h3 {
   color: var(--algonquin-green);
 }
 
+.sponsors-content h3 {
+  color: var(--off-white);
+}
+
 p {
   color: var(--off-white);
 }
@@ -70,6 +74,19 @@ p {
 
 }
 
+@keyframes DropFromTop {
+  from {
+    position: absolute;
+    top: -2rem;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
 .navbar {
   display: flex;
   flex-wrap: wrap;
@@ -78,6 +95,9 @@ p {
   background-color: var(--dark-algonquin-green);
   color: white;
   width: 100%;
+  /*animation-name: DropFromTop;
+  animation-duration: 2s;
+  animation-delay: 0s;*/
 }
 
 .nav-links {
@@ -99,6 +119,17 @@ p {
   text-decoration: none;
   color: var(--light-grey);
   font-size: 1em;
+  transition: transform .3s ease-in-out;
+}
+
+.social-icons a:hover i,
+.nav-item {
+  transition: transform .3s ease-in-out;
+}
+
+.social-icons a:hover i,
+.nav-item:hover {
+  transform: scale(1.2);
 }
 
 .social-icons {
@@ -122,13 +153,39 @@ p {
   margin: 0 10px;
 }
 
+#sponsors {
+  background-color: #003328;
+}
+
+.grid-item{
+  padding: 50px;
+}
+
+.grid-item img {
+  height: 50px;
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.home-subtitle,
+.home-title {
+  animation-name: fadeIn;
+  animation-duration: 2.5s;
+  animation-delay: 0s;
+}
+
+
 .team-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.comp-image,
+.comp-image img,
 .team-content img {
   height: 350px;
   padding: 50px;
@@ -138,19 +195,16 @@ p {
   width: 600px;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
 
-.main-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  /*border: 1px solid;*/
+  to {
+    opacity: 1;
+  }
 }
 
-.main-title>h1 {
-  margin: 0;
-}
 
 .competition-content {
   display: flex;
@@ -291,7 +345,7 @@ textarea {
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
 
-  .section{
+  .section {
     padding-top: 2rem;
   }
 
@@ -317,6 +371,7 @@ textarea {
     width: 85%;
   }
 
+  .sponsors-content>h3,
   .text-content>h3 {
     text-align: center;
     margin-bottom: 0;
@@ -324,6 +379,10 @@ textarea {
 
   #competition {
     padding-top: 0px;
+  }
+
+  .navbar{
+    width: 100%;
   }
 
 }
@@ -338,17 +397,18 @@ textarea {
   */
   .section {
     margin: 0 auto;
-    width: 400px;
+  }
+
+  .text-content{
+    width: 85%;
   }
 
   .team-content {
     justify-content: center;
   }
 
-
-
   .home-title {
-    font-size: 65px;
+    font-size: 200%;
   }
 
 
