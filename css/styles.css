@@ -135,17 +135,18 @@ p {
   background-color: #003328;
 }
 
+.grid-item{
+  padding: 50px;
+}
+
 .grid-item img {
   height: 50px;
-  text-align: center;
 }
 
 .sponsors-grid {
-  resize: both;
-  display: grid;
-  gap: 4px;
-  grid-template-rows: repeat(1, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .home-subtitle,
@@ -369,17 +370,18 @@ textarea {
   */
   .section {
     margin: 0 auto;
-    width: 400px;
+  }
+
+  .text-content{
+    width: 85%;
   }
 
   .team-content {
     justify-content: center;
   }
 
-
-
   .home-title {
-    font-size: 65px;
+    font-size: 200%;
   }
 
 
