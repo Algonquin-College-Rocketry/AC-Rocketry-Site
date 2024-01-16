@@ -29,6 +29,10 @@ h3 {
   color: var(--algonquin-green);
 }
 
+.sponsors-content h3 {
+  color: var(--off-white);
+}
+
 p {
   color: var(--off-white);
 }
@@ -70,6 +74,19 @@ p {
 
 }
 
+@keyframes DropFromTop {
+  from {
+    position: absolute;
+    top: -2rem;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
 .navbar {
   display: flex;
   flex-wrap: wrap;
@@ -78,6 +95,9 @@ p {
   background-color: var(--dark-algonquin-green);
   color: white;
   width: 100%;
+  /*animation-name: DropFromTop;
+  animation-duration: 2s;
+  animation-delay: 0s;*/
 }
 
 .nav-links {
@@ -94,7 +114,6 @@ p {
   margin-right: 2rem;
   /*font-weight: 300;*/
 }
-
 
 .nav-links li a {
   text-decoration: none;
@@ -352,6 +371,7 @@ textarea {
     width: 85%;
   }
 
+  .sponsors-content>h3,
   .text-content>h3 {
     text-align: center;
     margin-bottom: 0;
@@ -359,6 +379,10 @@ textarea {
 
   #competition {
     padding-top: 0px;
+  }
+
+  .navbar{
+    width: 100%;
   }
 
 }
