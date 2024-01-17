@@ -23,6 +23,12 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+
+
 h3 {
   font-size: 40px;
   font-weight: 400;
@@ -93,7 +99,6 @@ p {
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--dark-algonquin-green);
-  color: white;
   width: 100%;
   /*animation-name: DropFromTop;
   animation-duration: 2s;

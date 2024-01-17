@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-let scene, camera, canvas, fieldOfView, aspectRatio, pixelRatio, nearPlane, farPlane, renderer, rocket, HEIGHT, WIDTH, DIVIDEAMOUNT;
+let scene, camera, canvas, fieldOfView, aspectRatio, pixelRatio, nearPlane, farPlane, renderer, rocket, mouseX, mouseY, HEIGHT, WIDTH, DIVIDEAMOUNT;
 
 // makes the scene
 const createScene = () => {
@@ -68,8 +68,8 @@ const createScene = () => {
   renderer.shadowMap.enabled = true;
 
   window.addEventListener("resize", handleWindowResize, false); // on resize
-
 };
+
 
 // Handles what happens when the window resizes
 const handleWindowResize = () => {
@@ -112,6 +112,8 @@ const animationDuration = 2000;
 // Loop 
 const loop = () => {
   const t = (Date.now() % animationDuration) / animationDuration;
+
+
   renderer.render(scene, camera);
   const delta = targetRocketPosition * Math.sin(Math.PI * 2 * t);
   if (rocket) {
