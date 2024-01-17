@@ -34,6 +34,22 @@ h3 {
 
 }
 
+.navbar.hamburger.open{
+
+  height: 12rem;
+
+  .nav-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .nav-item{
+    margin-top: 0.5rem;
+  }
+}
+
 .navbar.hamburger .fa{
   display: flex;
   padding: 1rem;
