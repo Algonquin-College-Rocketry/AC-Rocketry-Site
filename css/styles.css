@@ -27,13 +27,27 @@ body::-webkit-scrollbar {
   width: 0.8rem;
 }
 
-
-
 h3 {
   font-size: 40px;
   font-weight: 400;
   color: var(--algonquin-green);
+
 }
+
+.navbar.hamburger .fa{
+  display: flex;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: 1rem;
+  justify-content: center;
+  color:var(--off-white)
+}
+
+.navbar.hamburger .social-icons,
+.navbar.hamburger .nav-links{
+  display: none;
+}
+
 
 .sponsors-content h3 {
   color: var(--off-white);
@@ -96,13 +110,17 @@ p {
 .navbar {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   background-color: var(--dark-algonquin-green);
   width: 100%;
   /*animation-name: DropFromTop;
   animation-duration: 2s;
   animation-delay: 0s;*/
+}
+
+.navbar .fa{
+  display: none;
 }
 
 .nav-links {
@@ -167,6 +185,7 @@ p {
 }
 
 .grid-item img {
+  
   height: 50px;
 }
 

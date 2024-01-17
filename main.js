@@ -2,6 +2,12 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 let scene, camera, canvas, fieldOfView, aspectRatio, pixelRatio, nearPlane, farPlane, renderer, rocket, mouseX, mouseY, HEIGHT, WIDTH, DIVIDEAMOUNT;
+let navbar = document.querySelector('.navbar');
+let hamburgerIcon = document.querySelector('.page .navbar .fa');
+hamburgerIcon.addEventListener('click', () => {
+  console.log("eeaewa");
+  navbar.classList.toggle("hamburger");
+});
 
 // makes the scene
 const createScene = () => {
@@ -85,6 +91,15 @@ const handleWindowResize = () => {
 
   if (WIDTH > 401 && WIDTH < 960) {
     console.log("tablet mode")
+  }
+
+  // too small for navbar
+  if (WIDTH < 756){
+    navbar.classList.add('hamburger');
+  }
+  if (WIDTH > 756){
+    navbar.classList.remove('hamburger');
+
   }
 
   rocket.updateMatrix()
