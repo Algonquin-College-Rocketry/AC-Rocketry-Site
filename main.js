@@ -1,8 +1,19 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-let scene, camera, canvas, fieldOfView, aspectRatio, pixelRatio, nearPlane, farPlane, renderer, rocket, HEIGHT, WIDTH, DIVIDEAMOUNT;
+let scene, camera, canvas, fieldOfView, aspectRatio, pixelRatio, nearPlane, farPlane, renderer, rocket, mouseX, mouseY, HEIGHT, WIDTH, DIVIDEAMOUNT;
+let navbar = document.querySelector('.navbar');
+let hamburgerIcon = document.querySelector('.page .navbar .fa');
+hamburgerIcon.addEventListener('click', () => {
+  console.log("eeaewa");
+  navbar.classList.toggle("open");
+});
 
+WIDTH = window.innerWidth;
+// too small for navbar
+if (WIDTH < 756) {
+  navbar.classList.add('hamburger');
+}
 // makes the scene
 const createScene = () => {
 
@@ -20,7 +31,7 @@ const createScene = () => {
   scene = new THREE.Scene();
   //const axisHelper = new THREE.AxesHelper(50);
   canvas = document.querySelector('#rocket-view-container');
-  aspectRatio = WIDTH / (HEIGHT/DIVIDEAMOUNT);
+  aspectRatio = WIDTH / (HEIGHT / DIVIDEAMOUNT);
   fieldOfView = 60;
   nearPlane = 1;
   farPlane = 10000;
@@ -42,13 +53,13 @@ const createScene = () => {
 
   // Defining the loader
   const loader = new GLTFLoader();
-  loader.load( "models/rocket.glb",
+  loader.load("models/rocket.glb",
     (gltf) => {
       rocket = gltf.scene;
       rocket.position.x = 0;
       rocket.position.y = 75;
       rocket.position.z = -290;
-  
+
       rocket.rotation.y = 55;
       rocket.rotation.z = -1.58;
       //rocket.position.x = -85;
@@ -64,19 +75,19 @@ const createScene = () => {
 
   scene.fog = new THREE.Fog(0xffffff, 10, 1200);
   //scene.background = new THREE.Color(0xff0000)
-  renderer.setSize(WIDTH, (HEIGHT/DIVIDEAMOUNT));
+  renderer.setSize(WIDTH, (HEIGHT / DIVIDEAMOUNT));
   renderer.shadowMap.enabled = true;
 
   window.addEventListener("resize", handleWindowResize, false); // on resize
-
 };
+
 
 // Handles what happens when the window resizes
 const handleWindowResize = () => {
   console.log('RESIZING')
- // HEIGHT = document.getElementById('rocket-view-container').clientHeight
+  // HEIGHT = document.getElementById('rocket-view-container').clientHeight
   //WIDTH = document.getElementById('rocket-view-container').clientWidth
-  
+
   HEIGHT = window.innerHeight;
   WIDTH = window.innerWidth;
 
@@ -87,10 +98,18 @@ const handleWindowResize = () => {
     console.log("tablet mode")
   }
 
+  // too small for navbar
+  if (WIDTH < 756) {
+    navbar.classList.add('hamburger');
+  }
+  if (WIDTH > 756) {
+    navbar.classList.remove('hamburger');
+  }
+
   rocket.updateMatrix()
-  
-  renderer.setSize(WIDTH, (HEIGHT/DIVIDEAMOUNT));
-  camera.aspect = WIDTH / (HEIGHT/DIVIDEAMOUNT);
+
+  renderer.setSize(WIDTH, (HEIGHT / DIVIDEAMOUNT));
+  camera.aspect = WIDTH / (HEIGHT / DIVIDEAMOUNT);
   camera.updateProjectionMatrix();
 };
 
@@ -112,6 +131,8 @@ const animationDuration = 2000;
 // Loop 
 const loop = () => {
   const t = (Date.now() % animationDuration) / animationDuration;
+
+
   renderer.render(scene, camera);
   const delta = targetRocketPosition * Math.sin(Math.PI * 2 * t);
   if (rocket) {
