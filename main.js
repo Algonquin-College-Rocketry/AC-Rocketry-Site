@@ -9,7 +9,10 @@ hamburgerIcon.addEventListener('click', () => {
   navbar.classList.toggle("open");
 });
 
-WIDTH = window.innerWidth;
+HEIGHT = window.innerHeight
+WIDTH = window.innerWidth
+DIVIDEAMOUNT = 1.5;
+
 // too small for navbar
 if (WIDTH < 756) {
   navbar.classList.add('hamburger');
@@ -17,17 +20,6 @@ if (WIDTH < 756) {
 // makes the scene
 const createScene = () => {
 
-  //pixelRatio = window.devicePixelRatio;
-  //HEIGHT = window.innerHeight * pixelRatio | 0;
-  //WIDTH = window.innerWidth * pixelRatio | 0;
-
-  HEIGHT = window.innerHeight
-  WIDTH = window.innerWidth
-  // debug
-  console.log(HEIGHT)
-  console.log(WIDTH)
-
-  DIVIDEAMOUNT = 1.5;
   scene = new THREE.Scene();
   //const axisHelper = new THREE.AxesHelper(50);
   canvas = document.querySelector('#rocket-view-container');
@@ -104,6 +96,9 @@ const handleWindowResize = () => {
   }
   if (WIDTH > 756) {
     navbar.classList.remove('hamburger');
+    if (navbar.classList.contains('open')){
+      navbar.classList.remove('open');
+    }
   }
 
   rocket.updateMatrix()
