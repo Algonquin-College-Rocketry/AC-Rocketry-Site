@@ -1,9 +1,9 @@
 :root {
-  --off-white: #F8F9F8;
+  --off-white: #f8f9f8;
   --algonquin-green: #006341;
-  --light-algonquin-green: #E5EFEC;
+  --light-algonquin-green: #e5efec;
   --dark-algonquin-green: #003328;
-  --light-grey: #E9E9E9;
+  --light-grey: #e9e9e9;
   --dark-grey: #c1c1c1;
   --black: #000000;
 }
@@ -11,7 +11,7 @@
 html {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
@@ -31,33 +31,31 @@ h3 {
   font-size: 40px;
   font-weight: 400;
   color: var(--algonquin-green);
-
 }
-.navbar.hamburger{
+.navbar.hamburger {
   -webkit-transition: all 0.5s ease-in;
   -moz-transition: all 0.5s ease-in;
 
   .social-icons,
-  .nav-links{
+  .nav-links {
     display: none;
   }
 
-  .fa{
+  .fa {
     display: flex;
     font-size: 1.2em;
     margin: 12px 0;
     margin-left: auto;
     padding-right: 1.5rem;
     justify-content: center;
-    color:var(--off-white)
+    color: var(--off-white);
   }
-
 }
-.navbar.hamburger.open{
+.navbar.hamburger.open {
   /*background-color: red; */
   height: 12rem;
   .social-icons,
-  .nav-links{
+  .nav-links {
     display: flex;
     flex-direction: column;
   }
@@ -65,12 +63,11 @@ h3 {
   .nav-links li {
     margin-top: 0.5rem;
   }
-
 }
-
 
 .sponsors-content h3 {
   color: var(--off-white);
+  text-align: center;
 }
 
 p {
@@ -111,7 +108,6 @@ p {
   letter-spacing: 3px;
   font-weight: 500;
   margin-top: 1em;
-
 }
 
 @keyframes DropFromTop {
@@ -140,7 +136,7 @@ p {
   animation-delay: 0s;*/
 }
 /*Hamburger icon is off by default*/
-.navbar .fa{
+.navbar .fa {
   display: none;
 }
 
@@ -170,7 +166,7 @@ p {
 
 .social-icons a:hover i,
 .nav-item {
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .social-icons a:hover i,
@@ -191,7 +187,7 @@ p {
 .social-icons a {
   margin-right: 10px;
   text-decoration: none;
-  color: var(--light-grey)
+  color: var(--light-grey);
 }
 
 .social-icons i {
@@ -203,12 +199,11 @@ p {
   background-color: #003328;
 }
 
-.grid-item{
+.grid-item {
   padding: 50px;
 }
 
 .grid-item img {
-  
   height: 50px;
 }
 
@@ -218,13 +213,17 @@ p {
   justify-content: space-evenly;
 }
 
+.sponsors-grid .grid-item img {
+  width: 200px;
+  height: 200px;
+}
+
 .home-subtitle,
 .home-title {
   animation-name: fadeIn;
   animation-duration: 2.5s;
   animation-delay: 0s;
 }
-
 
 .team-content {
   display: flex;
@@ -252,14 +251,11 @@ p {
   }
 }
 
-
 .competition-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
-
 
 /*
 .filter {
@@ -343,7 +339,6 @@ textarea {
   margin-top: 1rem;
   text-align: center;
   width: 25%;
-
 }
 
 .contact-button:hover {
@@ -391,7 +386,6 @@ textarea {
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
-
   .section {
     padding-top: 2rem;
   }
@@ -418,8 +412,8 @@ textarea {
     width: 85%;
   }
 
-  .sponsors-content>h3,
-  .text-content>h3 {
+  .sponsors-content > h3,
+  .text-content > h3 {
     text-align: center;
     margin-bottom: 0;
   }
@@ -428,15 +422,13 @@ textarea {
     padding-top: 0px;
   }
 
-  .navbar{
+  .navbar {
     width: 100%;
   }
-
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
-
   /*
   .main-title{
     background-color: blue;
@@ -446,7 +438,7 @@ textarea {
     margin: 0 auto;
   }
 
-  .text-content{
+  .text-content {
     width: 85%;
   }
 
@@ -457,13 +449,10 @@ textarea {
   .home-title {
     font-size: 200%;
   }
-
-
 }
 
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
-
   .home-title {
     font-size: clamp(100%, 1rem + 2vw, 47px);
   }
@@ -472,11 +461,11 @@ textarea {
     font-size: clamp(100%, 1rem + 2vw, 18px);
   }
 
-  .text-content>h3 {
+  .text-content > h3 {
     font-size: clamp(100%, 1rem + 2vw, 35px);
   }
 
-  .text-content>p {
+  .text-content > p {
     font-size: clamp(100%, 1rem + 2vw, 15px);
   }
 
@@ -499,7 +488,6 @@ textarea {
     display: flex;
     align-items: center;
     padding: 3rem 0;
-
   }
 
   .contact-title {
