@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.966);
   overflow-x: hidden;
 }
 
@@ -29,9 +29,10 @@ body::-webkit-scrollbar {
 
 h3 {
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--algonquin-green);
 }
+
 .navbar.hamburger {
   -webkit-transition: all 0.5s ease-in;
   -moz-transition: all 0.5s ease-in;
@@ -51,14 +52,17 @@ h3 {
     color: var(--off-white);
   }
 }
+
 .navbar.hamburger.open {
   /*background-color: red; */
   height: 12rem;
+
   .social-icons,
   .nav-links {
     display: flex;
     flex-direction: column;
   }
+
   .social-icons a,
   .nav-links li {
     margin-top: 0.5rem;
@@ -72,6 +76,7 @@ h3 {
 
 p {
   color: var(--off-white);
+  line-height: 1.6rem;
 }
 
 .page {
@@ -91,17 +96,16 @@ p {
 
 .home-title {
   margin: 0;
-  color: var(--off-white);
+  color: var(--algonquin-green);
   text-align: center;
-  font-size: 60px;
   text-transform: uppercase;
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .home-subtitle {
   margin: 0;
-  color: var(--dark-grey);
+  color: var(--off-white);
   text-align: center;
   font-size: 24px;
   text-transform: uppercase;
@@ -124,17 +128,19 @@ p {
 }
 
 .navbar {
+  padding: 0.5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: var(--dark-algonquin-green);
+  /*background-color: var(--dark-algonquin-green);*/
   width: 100%;
   transition: all 0.5s ease;
   /*animation-name: DropFromTop;
   animation-duration: 2s;
   animation-delay: 0s;*/
 }
+
 /*Hamburger icon is off by default*/
 .navbar .fa {
   display: none;
@@ -149,8 +155,10 @@ p {
 .nav-links li {
   margin-right: 10px;
   text-decoration: none;
-  font-size: 1em;
-  letter-spacing: 1px;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   margin-right: 2rem;
   transition: all 0.5s ease;
 
@@ -402,8 +410,13 @@ textarea {
     padding-right: 0;
   }
 
-  .comp-image img,
-  .team-content img {
+  .main-logo-svg {
+    width: 100%;
+    background-color: red;
+      
+  }
+
+  .comp-image img {
     height: 280px;
     padding-bottom: 8%;
   }
@@ -412,8 +425,8 @@ textarea {
     width: 85%;
   }
 
-  .sponsors-content > h3,
-  .text-content > h3 {
+  .sponsors-content>h3,
+  .text-content>h3 {
     text-align: center;
     margin-bottom: 0;
   }
@@ -429,6 +442,7 @@ textarea {
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
+
   /*
   .main-title{
     background-color: blue;
@@ -461,11 +475,11 @@ textarea {
     font-size: clamp(100%, 1rem + 2vw, 18px);
   }
 
-  .text-content > h3 {
+  .text-content>h3 {
     font-size: clamp(100%, 1rem + 2vw, 35px);
   }
 
-  .text-content > p {
+  .text-content>p {
     font-size: clamp(100%, 1rem + 2vw, 15px);
   }
 

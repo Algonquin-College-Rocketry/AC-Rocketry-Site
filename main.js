@@ -14,7 +14,7 @@ WIDTH = window.innerWidth
 DIVIDEAMOUNT = 1.5;
 
 // too small for navbar
-if (WIDTH < 756) {
+if (WIDTH < 825) {
   navbar.classList.add('hamburger');
 }
 // makes the scene
@@ -91,10 +91,10 @@ const handleWindowResize = () => {
   }
 
   // too small for navbar
-  if (WIDTH < 756) {
+  if (WIDTH < 825) {
     navbar.classList.add('hamburger');
   }
-  if (WIDTH > 756) {
+  if (WIDTH > 825) {
     navbar.classList.remove('hamburger');
     if (navbar.classList.contains('open')){
       navbar.classList.remove('open');
