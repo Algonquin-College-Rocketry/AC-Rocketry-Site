@@ -76,7 +76,7 @@ h3 {
 
 p {
   color: var(--off-white);
-  line-height: 1.6rem;
+  line-height: 2rem;
 }
 
 .page {
@@ -282,6 +282,7 @@ p {
   display: flex;
   max-width: 960px;
 }
+
 
 .contact-form {
   margin-top: 4rem;
@@ -498,7 +499,7 @@ textarea {
   }
 
   .contact {
-    background-color: var(--black);
+    background-color: rgba(0, 0, 0, 0.966);
     display: flex;
     align-items: center;
     padding: 3rem 0;
